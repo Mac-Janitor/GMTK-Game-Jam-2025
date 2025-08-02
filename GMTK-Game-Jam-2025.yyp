@@ -36,6 +36,7 @@
   "name":"GMTK-Game-Jam-2025",
   "resources":[
     {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_loop_controller","path":"objects/obj_loop_controller/obj_loop_controller.yy",},},
     {"id":{"name":"obj_loop_paddle","path":"objects/obj_loop_paddle/obj_loop_paddle.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

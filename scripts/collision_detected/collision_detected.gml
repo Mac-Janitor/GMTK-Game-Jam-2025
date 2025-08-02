@@ -32,7 +32,9 @@ function collision_detected(ball, paddle)
 	if (within_arc)
 	{
 		show_debug_message("Full collision detected!");
-		paddle.active = false;
+		//paddle.active = false;
+
+		
 		reflect_ball_direction(ball, paddle);
 		return true;
 	}

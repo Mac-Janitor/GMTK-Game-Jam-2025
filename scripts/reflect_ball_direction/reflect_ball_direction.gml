@@ -17,6 +17,10 @@ function reflect_ball_direction(ball, paddle)
     {
         hit_x = paddle.inner_middle_x;
         hit_y = paddle.inner_middle_y;
+		with(obj_loop_controller)
+		{
+			paddle.move_radius = paddle_radius_increase;
+		}		
     }
     else
     {
