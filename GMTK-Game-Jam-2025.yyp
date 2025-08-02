@@ -36,10 +36,8 @@
   "name":"GMTK-Game-Jam-2025",
   "resources":[
     {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},},
-    {"id":{"name":"obj_loop_controller_old","path":"objects/obj_loop_controller_old/obj_loop_controller_old.yy",},},
     {"id":{"name":"obj_loop_controller","path":"objects/obj_loop_controller/obj_loop_controller.yy",},},
     {"id":{"name":"obj_loop_paddle","path":"objects/obj_loop_paddle/obj_loop_paddle.yy",},},
-    {"id":{"name":"obj_loop","path":"objects/obj_loop/obj_loop.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"collision_detected","path":"scripts/collision_detected/collision_detected.yy",},},
     {"id":{"name":"update_polygon","path":"scripts/update_polygon/update_polygon.yy",},},
