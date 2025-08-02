@@ -11,6 +11,11 @@ if (keyboard_check(vk_right) && !needs_update)
 	inverse = 1;
 }
 
+if (mouse_check_button_pressed(mb_left))
+{
+	show_debug_message("Mouse clicked at: x=" + string(mouse_x) + ", y=" + string(mouse_y));
+}
+
 
 if (needs_update)
 {
