@@ -4,11 +4,14 @@
 
 function reflect_ball_direction(ball, paddle)
 {
-    // Determine distance to inner and outer middle points
+    // Push back to previous position
+    ball.x = ball.prev_x;
+    ball.y = ball.prev_y;
+
+    // Determine which side was hit
     var dist_to_inner = point_distance(ball.x, ball.y, paddle.inner_middle_x, paddle.inner_middle_y);
     var dist_to_outer = point_distance(ball.x, ball.y, paddle.outer_middle_x, paddle.outer_middle_y);
 
-    // Determine which side of the paddle was hit
     var hit_x, hit_y;
     if (dist_to_inner < dist_to_outer)
     {
@@ -21,14 +24,16 @@ function reflect_ball_direction(ball, paddle)
         hit_y = paddle.outer_middle_y;
     }
 
-    // Compute normal vector from center point to ball
     var normal_angle = point_direction(hit_x, hit_y, ball.x, ball.y);
     var incident_angle = ball.direction;
-
-    // Reflect over the normal
     var reflected_angle = (2 * normal_angle - incident_angle + 360) mod 360;
 
     ball.direction = reflected_angle;
+
+	// Nudge the ball in the new direction to prevent recollision
+    var separation_distance = 2;
+    ball.x += lengthdir_x(separation_distance, ball.direction);
+    ball.y += lengthdir_y(separation_distance, ball.direction);
 
     show_debug_message("Ball reflected. New direction: " + string(ball.direction));
 }

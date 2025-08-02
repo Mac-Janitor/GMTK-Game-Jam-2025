@@ -1,3 +1,6 @@
+prev_x = x;
+prev_y = y;
+
 x += lengthdir_x(speed, direction);
 y += lengthdir_y(speed, direction);
 
