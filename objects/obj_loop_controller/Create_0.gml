@@ -1,15 +1,25 @@
-var w = display_get_width();
-var h = display_get_height();
-max_radius = sqrt(sqr(w) + sqr(h));
+//paddle_inner_radius = 5;
+outer_radius = paddle_inner_radius + paddle_thickness;
+center_x = display_get_gui_width() / 2;
+center_y = display_get_gui_height() / 2;
 
-growth_speed = 4;
-spawn_interval = max_radius / 3 / growth_speed; // Delay between rings
-ring_timer = 0;
+var angle_step = 360 / paddle_count;
 
-var inst = instance_create_layer(display_get_width()/2, display_get_height()/2, "Instances", obj_loop);
+for (var i = 0; i < paddle_count; i++)
+{
+    var start_angle = i * angle_step;
+    var end_angle = start_angle + angle_step;
 
-//for (var i = 0; i < 3; i++)
-//{
-//	var inst = instance_create_layer(display_get_width()/2, display_get_height()/2, "Instances", obj_loop);
-//    inst.radius = -i * spawn_interval * growth_speed; // Offset each ring in time
-//}
+    var inst = instance_create_layer(center_x, center_y, "Instances", obj_loop_paddle);
+    inst.start_angle = start_angle;
+    inst.end_angle = end_angle;
+    inst.inner_radius = paddle_inner_radius;
+    inst.outer_radius = outer_radius;
+	
+	//inst.image_angle = image_angle;
+	
+	if (i % 2 == 0)
+		inst.active = false;
+	
+    update_polygon(inst);
+}
