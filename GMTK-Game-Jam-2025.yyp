@@ -40,6 +40,7 @@
     {"id":{"name":"obj_loop_paddle","path":"objects/obj_loop_paddle/obj_loop_paddle.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"collision_detected","path":"scripts/collision_detected/collision_detected.yy",},},
+    {"id":{"name":"reflect_ball_direction","path":"scripts/reflect_ball_direction/reflect_ball_direction.yy",},},
     {"id":{"name":"update_polygon","path":"scripts/update_polygon/update_polygon.yy",},},
     {"id":{"name":"shd_ball_effect","path":"shaders/shd_ball_effect/shd_ball_effect.yy",},},
   ],

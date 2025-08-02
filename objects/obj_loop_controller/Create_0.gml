@@ -18,7 +18,7 @@ for (var i = 0; i < paddle_count; i++)
 	
 	//inst.image_angle = image_angle;
 	
-	if (i !=  0)
+	if (i % 2 ==  0)
 		inst.active = false;
 	
     update_polygon(inst);

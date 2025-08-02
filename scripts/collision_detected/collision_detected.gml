@@ -10,8 +10,6 @@ function collision_detected(ball, paddle)
     if (distance_to_ball < paddle.inner_radius || distance_to_ball > paddle.outer_radius)
         return false;	
 	
-	show_debug_message("Ring collision detected");
-	
 	var angle_to_ball = point_direction(paddle.x, paddle.y, ball.x, ball.y);
 
 	// Apply paddle's rotation to its angle range
@@ -34,6 +32,8 @@ function collision_detected(ball, paddle)
 	if (within_arc)
 	{
 		show_debug_message("Full collision detected!");
+		paddle.active = false;
+		reflect_ball_direction(ball, paddle);
 		return true;
 	}
 	
