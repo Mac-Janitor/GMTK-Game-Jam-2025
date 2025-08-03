@@ -1,6 +1,6 @@
 // Rings and zoom levels
 var ring_radii = [225, 425];
-var zoom_levels = [1, 1.25, 1.5];
+var zoom_levels = [0.5, 1, 1.25];
 
 // Center and ball pos
 var center_x = room_width * 0.5;

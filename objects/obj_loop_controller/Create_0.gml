@@ -3,6 +3,8 @@ outer_radius = paddle_starting_radius + paddle_thickness;
 center_x = display_get_gui_width() / 2;
 center_y = display_get_gui_height() / 2;
 
+largest_radius = paddle_starting_radius + paddle_radius_increase;
+
 var angle_step = 360 / paddle_count;
 
 for (var i = 0; i < paddle_count; i++)

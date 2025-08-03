@@ -20,4 +20,9 @@ switch (game_state) {
     case "playing":
         // You can draw gameplay HUD or nothing here
         break;
+		
+	case "game_over":
+		draw_text(_cx, _cy - 50, "Game Over! Final score: " + string(score));
+        draw_text(_cx, _cy, "Press ENTER to Restart");
+        draw_text(_cx, _cy + 100, "Press Q to Quit");
 }

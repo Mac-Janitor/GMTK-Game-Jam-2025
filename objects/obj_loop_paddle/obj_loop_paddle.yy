@@ -40,6 +40,7 @@
     {"$GMObjectProperty":"v1","%Name":"outer_middle_x","filters":[],"listItems":[],"multiselect":false,"name":"outer_middle_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"outer_middle_y","filters":[],"listItems":[],"multiselect":false,"name":"outer_middle_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"move_radius","filters":[],"listItems":[],"multiselect":false,"name":"move_radius","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"flip_color","filters":[],"listItems":[],"multiselect":false,"name":"flip_color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

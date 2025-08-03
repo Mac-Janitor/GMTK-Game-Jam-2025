@@ -36,4 +36,17 @@ switch (game_state) {
 		instance_deactivate_all(true);
 		instance_activate_object(obj_game_controller);
         break;
+		
+    case "game_over":
+        if (keyboard_check_pressed(vk_enter)) {
+			score = 0;
+            // Restart the game
+            game_restart();  // restarts the game from the first room
+        }
+        if (keyboard_check_pressed(ord("Q"))) {
+            game_end(); // Quit game from pause menu
+        }
+		instance_deactivate_all(true);
+		instance_activate_object(obj_game_controller);
+        break;		
 }

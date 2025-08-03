@@ -3,6 +3,9 @@ if (active)
     draw_set_color(c_white);
     draw_primitive_begin(pr_trianglestrip);
 
+	if (flip_color)
+	    draw_set_color(c_red);
+
     for (var i = 0; i < array_length(segment_points); i++)
     {
         var p = segment_points[i];

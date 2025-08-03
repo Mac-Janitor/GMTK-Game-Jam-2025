@@ -20,6 +20,24 @@ function reflect_ball_direction(ball, paddle)
 		with(obj_loop_controller)
 		{
 			paddle.move_radius = paddle_radius_increase;
+			var new_radius = paddle.inner_radius + paddle_radius_increase;
+			with(obj_loop_controller)
+			{
+				if (largest_radius < new_radius)
+				{
+					if (new_radius < radius_limit)
+					{
+						largest_radius = new_radius;
+					}
+					else
+					{
+						paddle.flip_color = !paddle.flip_color;
+						paddle.inner_radius = 5;
+						paddle.outer_radius = paddle.inner_radius + paddle_thickness;
+						paddle.move_radius = paddle_starting_radius - 5;
+					}
+				}
+			}
 		}		
     }
     else
@@ -38,6 +56,11 @@ function reflect_ball_direction(ball, paddle)
     var separation_distance = 2;
     ball.x += lengthdir_x(separation_distance, ball.direction);
     ball.y += lengthdir_y(separation_distance, ball.direction);
+	
+	with(obj_game_controller)
+	{
+		score += 1;
+	}
 
     show_debug_message("Ball reflected. New direction: " + string(ball.direction));
 }
